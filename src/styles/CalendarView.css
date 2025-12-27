@@ -1,0 +1,320 @@
+.calendar-container {
+  padding: 0;
+  background-color: transparent;
+  min-height: auto;
+}
+
+.calendar-container h1 {
+  margin-bottom: 32px;
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.calendar-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1400px;
+}
+
+.calendar-section {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.calendar-section:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.react-calendar {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+  background: transparent;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  margin-bottom: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #1e293b;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+.react-calendar__navigation button:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.react-calendar__navigation button[disabled] {
+  background: #f1f5f9;
+  color: #94a3b8;
+  opacity: 0.5;
+}
+
+.react-calendar__month-view__weekdays {
+  margin-bottom: 12px;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 12px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.react-calendar__tile {
+  padding: 16px 8px;
+  position: relative;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #1e293b;
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+.react-calendar__tile:hover {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-color: #e2e8f0;
+  transform: scale(1.05);
+}
+
+.react-calendar__tile--now {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  color: #0369a1;
+  font-weight: 700;
+  border-color: #0ea5e9;
+}
+
+.react-calendar__tile--active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  border-color: #667eea;
+}
+
+.react-calendar__tile--active:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.react-calendar__tile--neighboringMonth {
+  color: #cbd5e1;
+  opacity: 0.5;
+}
+
+.event-dot {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+  border: 2px solid white;
+}
+
+.events-section {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.events-section:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.events-section h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #1e293b;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+
+.events-list {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.events-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.events-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.events-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.events-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.event-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-left: 4px solid #667eea;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  border-left-width: 4px;
+}
+
+.event-card:hover {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateX(4px);
+  border-left-color: #764ba2;
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.event-header h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  flex: 1;
+}
+
+.type {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.type.corrective {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #991b1b;
+}
+
+.type.preventive {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #065f46;
+}
+
+.event-body {
+  margin-top: 12px;
+}
+
+.event-body p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.event-body p strong {
+  color: #1e293b;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.no-events {
+  text-align: center;
+  color: #94a3b8;
+  padding: 40px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  border: 2px dashed #e2e8f0;
+}
+
+@media (max-width: 1024px) {
+  .calendar-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .calendar-section,
+  .events-section {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-container h1 {
+    font-size: 24px;
+  }
+
+  .calendar-section,
+  .events-section {
+    padding: 20px;
+  }
+
+  .react-calendar__tile {
+    padding: 12px 6px;
+  }
+
+  .event-dot {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    bottom: 4px;
+    right: 4px;
+  }
+}
